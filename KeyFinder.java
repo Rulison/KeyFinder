@@ -205,7 +205,6 @@ public class KeyFinder {
 						else if(chord.charAt(1) == 'm'){  //like Am
 							notes = (String[]) ((SList) signatures.find(""+chord.substring(0, 1)).value()).front().item();
 							noteCounts[getChromaticIndex(notes[0])]++;
-							System.out.println((getChromaticIndex(notes[2])+11)%12);
 							noteCounts[(getChromaticIndex(notes[2])+11)%12]++;
 							noteCounts[getChromaticIndex(notes[4])]++;
 						}
@@ -222,7 +221,6 @@ public class KeyFinder {
 							noteCounts[getChromaticIndex(notes[6])-1]++;
 						}
 						else if(chord.charAt(1) == '9') {
-							System.out.println(chord);
 							notes = (String[]) ((SList) signatures.find(""+chord.substring(0, 1)).value()).front().item();
 							noteCounts[getChromaticIndex(notes[0])]++;
 							noteCounts[getChromaticIndex(notes[1])]++;
